@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import Users from "./components/Users/Users";
 import {userService} from "./services/user.service";
-import UsersFilter from "./UsersFilter/UsersFilter";
+import UsersFilter from "./components/UsersFilter/UsersFilter";
 
 
 const App = () => {
