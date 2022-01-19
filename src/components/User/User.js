@@ -1,11 +1,14 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {NavLink as Link} from "react-router-dom";
 
 const User = (props) => {
     const {id, name, username} = props.user;
     return (
         <div>
             <Link to={id.toString()} state={props.user}>{id} - name:{name} - username: {username} </Link>
+            <Link to={`${id}/albums`}>
+                <button>User albums</button>
+            </Link>
         </div>
     );
 };
