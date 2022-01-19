@@ -16,7 +16,7 @@ const SinglePost = () => {
             return;
         }
         postService.getById(id).then(value => setPost({...value}));
-    }, []);
+    }, [id]);
 
     return (
         <>

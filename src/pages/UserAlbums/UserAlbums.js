@@ -11,7 +11,7 @@ const UserAlbums = () => {
 
     useEffect(()=> {
         usersService.getUserAlbums(userId).then(value => setAlbums([...value.data]))
-    },[])
+    },[userId])
 
     return (
         <div>

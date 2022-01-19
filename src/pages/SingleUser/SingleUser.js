@@ -15,7 +15,7 @@ const SingleUser = () => {
             return;
         }
         usersService.getById(userId).then(value => setUser({...value}));
-    }, []);
+    }, [userId]);
     return (
         <>
             <div>

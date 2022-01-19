@@ -19,7 +19,7 @@ const App = () => (
                     <Route path="posts" element={<UserPosts/>}/>
                 </Route>
                 <Route path=":userId/albums" element={<UserAlbums/>}>
-                <Route path=":albumId/photos" element={<AlbumPhotos/>}/>
+                    <Route path=":albumId/photos" element={<AlbumPhotos/>}/>
                 </Route>
             </Route>
             <Route path="posts" element={<PostsPage/>}>
