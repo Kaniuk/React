@@ -1,0 +1,19 @@
+.characters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.episode-info {
+    height: 60px;
+    background: lightsteelblue;
+    font-size: 20px;
+    font-weight: bold;
+
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

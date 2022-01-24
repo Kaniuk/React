@@ -1,0 +1,12 @@
+.character {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
