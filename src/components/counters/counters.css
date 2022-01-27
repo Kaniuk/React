@@ -2,6 +2,7 @@
     border: 1px solid royalblue;
     width: 15vw;
     margin: auto;
+
 }
 
 .state {
@@ -14,7 +15,7 @@
 button {
     padding: 0.35em 1.2em;
     border: 0.1em solid lightskyblue;
-    margin: 15px;
+    margin: 10px;
     border-radius: 5px;
     font-size: 15px;
     color: darkslategrey;
