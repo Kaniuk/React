@@ -1,0 +1,48 @@
+body {
+    margin: 0 auto;
+}
+
+.layout {
+    min-height: 70px;
+    background-color: lightsteelblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.layout a {
+    color: black;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.layout a[class='active'] {
+    color: midnightblue;
+}
+
+form {
+    margin: 50px;
+    font-size: 20px;
+}
+
+button {
+    padding: 0.35em 1.2em;
+    border: 0.1em solid lightskyblue;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: darkslategrey;
+    text-align: center;
+    transition: all 0.2s;
+
+}
+
+button:hover {
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+input {
+    padding: 5px;
+}

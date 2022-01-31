@@ -25,7 +25,7 @@ export const createCar = createAsyncThunk(
             console.log(car);
             dispatch(addCar({car}));
         } catch (e) {
-
+            console.error(e);
         }
     }
 );
@@ -38,7 +38,7 @@ export const updateCarThunk = createAsyncThunk(
             console.log(car);
             dispatch(updateCar({car}));
         } catch (e) {
-
+            console.error(e);
         }
     }
 );

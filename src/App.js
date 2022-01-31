@@ -1,16 +1,35 @@
-import React, {useState} from 'react';
+import {NavLink, Outlet, Route, Routes} from "react-router-dom";
 
-import {Forms} from "./components/forms/forms";
-import {Cars} from "./components/cars/cars";
+import CarsPage from "./pages/CarsPage/CarsPage";
+import UsersPage from "./pages/UsersPage/UsersPage";
+import PostsPage from "./pages/PostsPage/PostsPage";
+import CommentsPage from "./pages/CommentsPage/CommentsPage";
+import './App.css'
 
+const Layout = () => (
+    <>
+        <nav className='layout'>
+            <NavLink to="users">Users</NavLink>
+            <NavLink to="cars">Cars</NavLink>
+            <NavLink to="posts">Posts</NavLink>
+            <NavLink to="comments">Comments</NavLink>
+        </nav>
+        <Outlet />
+    </>
+);
 const App = () => {
-
-    const [carForUpdate, setCarForUpdate] = useState({});
-
     return (
         <div>
-            <Forms carForUpdate={carForUpdate}/>
-            <Cars setCarForUpdate={setCarForUpdate}/>
+            {/*<CarsPage/>*/}
+
+            <Routes>
+                <Route path="/" element={<Layout/>}>
+                    <Route path="cars" element={<CarsPage/>}/>
+                    <Route path="users" element={<UsersPage/>}/>
+                    <Route path="posts" element={<PostsPage/>}/>
+                    <Route path="comments" element={<CommentsPage/>}/>
+                </Route>
+            </Routes>
         </div>
     );
 };
