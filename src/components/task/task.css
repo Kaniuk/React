@@ -10,10 +10,11 @@ label.completed {
     margin: 20px;
 
 }
-.counter{
+
+.counter {
     position: fixed;
     right: 820px;
-    top: 2%;
+    top: 0;
     font-size: 30px;
     font-weight: bold;
 }
