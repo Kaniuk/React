@@ -17,8 +17,8 @@ const Form = () => {
     return (
         <div>
             <form onSubmit={handleSubmit(submit)}>
-                <label>Task  <input type="text" {...register('task', {required: true, minLength: 3})}
-                                  placeholder={'What should I do?'}/></label>
+                <label>Task <input type="text" {...register('task', {required: true, minLength: 3})}
+                                   placeholder={'What should I do?'}/></label>
                 <button>Save</button>
             </form>
         </div>
