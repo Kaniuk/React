@@ -1,0 +1,28 @@
+.main-layout {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+button {
+    padding: 0.35em 1.2em;
+    border: 0.1em solid lightskyblue;
+    margin-top: 12px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: darkslategrey;
+    text-align: center;
+    transition: all 0.2s;
+
+}
+
+button:hover {
+    background-color: #FFFFFF;
+    cursor: pointer;
+}

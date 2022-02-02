@@ -1,0 +1,8 @@
+.image {
+    display: flex;
+    flex-direction: column;
+}
+
+.updateButton button {
+    width: 100%;
+}
