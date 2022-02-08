@@ -25,9 +25,11 @@ const SingleMoviePage = () => {
             {error && <h1>{error}</h1>}
             {movie && (
                 <div>
-                    <div className="background-image"><img
-                        src={`https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${movie.backdrop_path}`}
-                        alt="poster_path"/></div>
+                    <div className="background-image">
+                        <img
+                            src={`https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${movie.backdrop_path}`}
+                            alt="poster_path"/>
+                    </div>
 
                     <div className="page-content">
                         <div className="content-img"><img
@@ -43,7 +45,7 @@ const SingleMoviePage = () => {
                             Release date:{movie.release_date}
                             <hr/>
                             Runtime:{movie.runtime}
-                            <div className="genres-movie">
+                            <div>
                                 <img src={`https://cdn-icons-png.flaticon.com/512/31/31087.png`} alt="genres" width="30"
                                      height="30"/>
                                 {movie.genres.map(id => <div key={id.id}>{genreNamesMap[id.id]}</div>)}
@@ -53,7 +55,6 @@ const SingleMoviePage = () => {
                     </div>
                 </div>
             )}
-
         </div>
     );
 };

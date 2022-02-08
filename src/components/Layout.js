@@ -20,7 +20,7 @@ const Layout = () => {
                 </div>
                 <div className="user">
                     <h4>Welcome!</h4>
-                    <div className="avatar">{userInitials}</div>
+                    <div className="avatar" title={userName}>{userInitials}</div>
                 </div>
             </nav>
             <div className="content">
