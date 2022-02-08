@@ -7,6 +7,7 @@ import SingleMoviePage from "./Pages/SingleMoviePage/SingleMoviePage";
 import {getAllGenres} from "./store/genres.slice";
 
 import './App.css';
+import './components/Layuot.css'
 import Layout from "./components/Layout";
 
 const App = () => {
