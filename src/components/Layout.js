@@ -1,5 +1,5 @@
-import React from 'react';
-import {NavLink, Outlet} from "react-router-dom";
+import React, {useEffect, useRef} from 'react';
+import {NavLink, Outlet, useLocation} from "react-router-dom";
 
 
 const userName = 'Liudmyla Kaniuk';
@@ -7,6 +7,13 @@ const userInitials = userName.split(' ')
     .map(part => part[0].toUpperCase()).join('');
 
 const Layout = () => {
+    const {pathname} = useLocation();
+    const contentRef = useRef(null);
+
+    useEffect(() => {
+        // window.scrollTo(0, 0);
+        contentRef.current.scrollTo({top: 0, behavior: 'smooth'});
+    }, [pathname]);
     return (
         <div className="main-layout">
             <nav className="header">
@@ -23,7 +30,7 @@ const Layout = () => {
                     <div className="avatar" title={userName}>{userInitials}</div>
                 </div>
             </nav>
-            <div className="content">
+            <div className="content" ref={contentRef}>
 
                 <Outlet/>
             </div>

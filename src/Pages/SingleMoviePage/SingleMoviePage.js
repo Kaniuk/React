@@ -38,7 +38,7 @@ const SingleMoviePage = () => {
                         <div className="content-info">
                             <h1>{movie.original_title}</h1>
                             <h2> budget:{movie.budget}</h2>
-                            <h3>original_language:{movie.original_language}</h3>
+                            <h3>Original language:{movie.original_language}</h3>
                             <h3>{movie.overview}</h3>
                             Popularity:{movie.popularity}
                             <hr/>

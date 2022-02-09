@@ -25,7 +25,7 @@ const singleMovieSlice = createSlice({
     },
     extraReducers: {
         [getSingleMovie.pending]: (state) => {
-            // state.movie = null;
+            state.movie = null;
             state.status = 'loading';
             state.error = null;
 
