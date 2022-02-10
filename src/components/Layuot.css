@@ -10,8 +10,13 @@ nav {
     display: flex;
     flex-direction: column;
 }
+
 .main-layout.layout__mode_dark {
     background: #10103A;
+}
+
+.header.layout__mode_dark {
+    background: royalblue;
 }
 
 .header {
@@ -89,6 +94,7 @@ input {
     align-items: center;
     gap: 5px;
 }
+
 .mode {
     display: flex;
     align-items: center;

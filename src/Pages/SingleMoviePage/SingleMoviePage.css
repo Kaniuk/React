@@ -31,3 +31,26 @@
     display: flex;
     flex-direction: column;
 }
+
+.go-back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.companies {
+    display: flex;
+
+    margin-top: 8px;
+}
+
+.company {
+    display: inline-block;
+}
+
+.company + .company::before {
+    display: inline-block;
+    white-space: pre;
+    content: ", ";
+}

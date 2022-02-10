@@ -11,7 +11,7 @@ const userInitials = userName.split(' ')
 const Layout = () => {
     const {pathname} = useLocation();
     const [darkMode, setDarkMode] = useState(false);
-    const toggleDarkMade = () => {
+    const toggleDarkMode = () => {
         setDarkMode(mode => !mode)
     }
     const contentRef = useRef(null);
@@ -22,7 +22,7 @@ const Layout = () => {
     }, [pathname]);
     return (
         <div className={`main-layout ${darkMode ? 'layout__mode_dark' : ''}`}>
-            <nav className="header">
+            <nav className={`header ${darkMode ? 'layout__mode_dark' : ''}`}>
                 <img
                     src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
                     alt="The Movie Database (TMDB)" width="200" height="40"/>
@@ -33,7 +33,7 @@ const Layout = () => {
                 </div>
                 <div className='mode'>
                    Dark mode
-                <Switcher checked={darkMode} onToggle={toggleDarkMade}/>
+                <Switcher checked={darkMode} onToggle={toggleDarkMode}/>
                 </div>
                 <div className="user">
                     <h4>Welcome!</h4>
