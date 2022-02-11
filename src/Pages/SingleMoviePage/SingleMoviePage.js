@@ -17,7 +17,6 @@ const SingleMoviePage = () => {
         dispatch(getSingleMovie({id}));
     }, [id]);
 
-    const genreNamesMap = useSelector(state => state.genres.genreNamesMap);
     return (
         <div>
             {status === 'loading' && <h1>Loading...</h1>}
@@ -49,7 +48,7 @@ const SingleMoviePage = () => {
                             <div>
                                 <img src={`https://cdn-icons-png.flaticon.com/512/31/31087.png`} alt="genres" width="30"
                                      height="30"/>
-                                {movie.genres.map(id => <div key={id.id}>{genreNamesMap[id.id]}</div>)}
+                                {movie.genres.map(genre => <div key={genre.id}>{genre.name}</div>)}
                             </div>
                             <div className="companies">
                                 Production companies:
@@ -57,25 +56,28 @@ const SingleMoviePage = () => {
                                     <div className="company" key={company.id}>{company.name}</div>
                                 ))}
                             </div>
+
                             <div className="companies">
                                 Production countries:
-                                {movie.production_countries.map(country => (
-                                    <div className="company" key={country.id}>{country.name}</div>
-                                ))} </div>
+                                {movie.production_countries.map((country) => (
+                                    <div className="company" key={country.name}>{country.name}</div>
+                                ))}
+                            </div>
+
                             <div className="companies">
                                 Spoken languages:
-                                {movie.spoken_languages.map(lenguage => (
-                                <div className="company" key={lenguage.id}>{lenguage.name}</div>
-                            ))}
+                                {movie.spoken_languages.map(language => (
+                                    <div className="company" key={language.name}>{language.english_name}</div>
+                                ))}
                             </div>
                             Status: {movie.status}
-                            <link rel="stylesheet" href={`movie.homepage`}/>
+                            <a target="_blank" href={movie.homepage}>Open movie page</a>
                         </div>
                     </div>
                 </div>
             )}
             <div className="go-back-button">
-                <button onClick={() => navigate(-1)}> go to previous page</button>
+                <button onClick={() => navigate(-1)}> go back</button>
             </div>
         </div>
     );
