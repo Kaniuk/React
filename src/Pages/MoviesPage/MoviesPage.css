@@ -1,6 +1,11 @@
 .movies-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content: center;
     gap: 10px;
+}
+
+.genres-select {
+    margin-bottom: 10px;
+    margin-top: -5px;
 }

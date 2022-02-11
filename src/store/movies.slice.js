@@ -5,10 +5,9 @@ import {movieService} from "../services/movie.service";
 
 export const getAllMovies = createAsyncThunk(
     'moviesSlice/getAllMovies',
-    async ({page}, {rejectWithValue}) => {
-
+    async ({page, genreFilter}, {rejectWithValue}) => {
         try {
-            const movies = await movieService.getAll(page);
+            const movies = await movieService.getAll(page, genreFilter);
             return movies;
         } catch (e) {
             return rejectWithValue(e.message);
@@ -21,6 +20,7 @@ const moviesSlice = createSlice({
     name: 'moviesSlice',
     initialState: {
         movies: [],
+        // genreFilter: [28, 12],
         pageInfo: {
             page: 1,
             total_pages: null,
